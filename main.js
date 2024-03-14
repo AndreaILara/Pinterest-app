@@ -45,7 +45,7 @@ const searchPics = (apiUrl, key, query) => {
         } else {
 
           noImagesMessage.innerHTML =
-            'No se encontraron imágenes que coincidan con tu búsqueda';
+            'No se encontraron resultados';
           noImagesMessage.style.display = 'flex';
           noImagesMessage.style.alignItems = 'center';
           noImagesMessage.style.justifyContent = 'center';
@@ -72,6 +72,17 @@ const searchPics = (apiUrl, key, query) => {
 searchInput.addEventListener('change', (e) =>
   searchPics(UNSPLASH_API, USER_KEY, e.target.value)
 );
+searchInput.addEventListener('input', (e) => {
+  const query = e.target.value.trim();
+
+  if (query === '') {
+
+    firstLoad();
+  } else {
+
+    searchPics(UNSPLASH_API, USER_KEY, query);
+  }
+});
 
 
 firstLoad(UNSPLASH_API, USER_KEY);
