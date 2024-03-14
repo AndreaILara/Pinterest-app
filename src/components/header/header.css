@@ -44,6 +44,13 @@ li.icon:hover {
 #search:hover {
   outline: 2px solid var(--color-primario-1);
 }
+.no-images-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  margin-top: 20px;
+}
 @media (max-width: 576px) {
   nav {
     width: 100%;

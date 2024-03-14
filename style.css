@@ -50,7 +50,22 @@ a {
   gap: var(--espaciado-m);
 }
 
+
 body h2 {
   text-align: center;
-  padding: var(--espaciado-l);
+}
+
+main {
+  text-align: center;
+}
+
+#mainGallery {
+  width: 100%;
+}
+
+.centered-message {
+  display: block;
+  width: 100%;
+  text-align: center;
+  column-span: all; /* Esto evita que el mensaje se divida en columnas */
 }
